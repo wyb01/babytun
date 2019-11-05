@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-/*@@请加Q群：369531466,与几百名工程师共同学习,遇到难题可随时@老齐,多一点真诚，少一点套路@@*/public class PromotionSecKillService {
+public class PromotionSecKillService {
     @Resource
     private PromotionSecKillDAO promotionSecKillDAO;
     @Resource
@@ -25,6 +25,16 @@ import java.util.UUID;
 
     @Resource
     private OrderDAO orderDAO;
+
+    /**
+     * description:
+     * @param psId ： 秒杀活动编号
+     * @param userid：用户编号
+     * @param num：秒杀数量
+     * @return void
+     * @author wyb
+     * @createTime 2019/11/5 下午10:57
+     */
     public void processSecKill(Long psId, String userid, Integer num) throws SecKillException {
         PromotionSecKill ps = promotionSecKillDAO.findById(psId);
         if (ps == null) {

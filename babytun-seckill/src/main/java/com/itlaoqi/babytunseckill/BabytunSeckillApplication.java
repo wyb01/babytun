@@ -13,7 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @MapperScan("com.itlaoqi.babytunseckill")
 @EnableScheduling //启用任务调度功能
-/*@@请加Q群：369531466,与几百名工程师共同学习,遇到难题可随时@老齐,多一点真诚，少一点套路@@*/public class BabytunSeckillApplication {
+public class BabytunSeckillApplication {
 	//修改默认的redisTemplate持久化方式,这块的知识可以学习“小白轻松学Redis”课程
 	@Bean
 	public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
